@@ -12,6 +12,11 @@ take when the server comes up. This can be handled by different semantics provid
 In this implementation at most once semantics is used by the client side, while the server handles clients 
 failures without assuming restart.
 
+Client can discover/communicate with many servers wile requests are distributed uniformly to the available servers.
+
+Tested with a ping-pong application where client sends 10 requests back-to-back without delay and waits server replies.
+Server replies after waiting T = 500 ms. Servers and clients are added automatically after T = 1 min.
+
 
 
 
